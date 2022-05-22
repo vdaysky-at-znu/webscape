@@ -1,0 +1,145 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plants</title>
+  </head>
+<body>
+
+  <div class="container-main">
+
+    {% include 'common/navbar.html' %}
+
+    <div class="section-container">
+
+      <div class="section section-legend">
+        <div class="curves">
+          <div class="img-frame" style="z-index: 10">
+            <div class="img-container">
+              <img src="{% static 'images/top.png' %}">
+              <a target="_blank" class="img-price-tag" href="https://www.youtube.com/watch?v=G510jeWiaV0"> <i class="fa-solid fa-play"></i> </a>
+            </div>
+          </div>
+
+          <div class="curve curve-front"></div>
+          <div class="curve curve-back"></div>
+        </div>
+
+        <div class="block-main flex space-between">
+          <div>
+            <div class="text-lead-block">Trees are always nice to us. Be nice to them.</div>
+            <div class="text-small-block">Trees are the lungs of the earth. But, with the increasing population and land requirement, the practice of deforestation</div>
+            <div class="learn-more-block">
+              <a class='btn nowrap' href="/about">Learn More</a>
+            </div>
+          </div>
+          <div class="mq-1-on mq-2-off">
+            <div class="img-frame ms-1" style="z-index: 10">
+              <div class="img-container">
+                <img src="{% static 'images/top.png' %}">
+                <div class="img-price-tag"> <i class="fa-solid fa-play"></i> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="slider1" class="section">
+
+      
+      </div>
+
+      <div id="slider2" class="section">
+
+      </div>
+
+      <div class="section section-best-product">
+
+        <div class="flex space-between align-center mb-5">
+          <h2 style="font-family: Lobster Two;" >Our Best Product</h2>
+          <a class="btn light">See ALL</a>
+        </div>
+
+        <div class="best-product">
+          <div class="img-frame img-frame-small mb-3">
+            <img src="{% static 'images/bp1.png' %}">
+          </div>
+          <div class="img-frame img-frame-small mb-3">
+            <img src="{% static 'images/bp2.png' %}">
+          </div>
+          <div class="img-frame img-frame-small mb-3">
+            <img src="{% static 'images/bp3.png' %}">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <footer>
+
+      <div style="border-bottom: 1px solid white; padding: 3rem;">
+        <div class='logo pb-5'>
+          <img class="logo-img" src="{% static 'images/logo.png' %}">
+          <span class="nowrap" style="color: white">Plant BD</span>
+        </div>
+
+        <div class="flex flex-center">
+          <div class="flex space-between" style="color: white; font-family: Neuton; width: max(50%, 300px); opacity: 0.6;">
+            <a class="btn borderless text-white">Home</a>
+            <a class="btn borderless text-white">Product</a>
+            <a class="btn borderless text-white">About</a>
+            <a class="btn borderless text-white">Gallery</a>
+            <a class="btn borderless text-white">Blog</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="flex flex-center-x pb-5" style="opacity: 0.6; color: white">
+          <p>
+            @some random copyright
+          <p>
+      </div>
+
+    </footer>
+
+    <div id="modal-order" class="modal-container hidden">
+      <div class="modal flex flex-row-to-col">
+        <div class="modal-close" onclick="close_modal('modal-order')"> <i class="fa fa-times" aria-hidden="true"></i> </div>
+        <div class="modal-header">
+          <div class="image">
+          </div>
+          <p class="text-neuton text-center"></p>
+
+        </div>
+        <form method="POST" class="modal-body">
+          <h2>Place Order </h2>
+          <div class="input-group">
+            <div class="input-label">Your Name</div>
+            <input name="name" class="form-input">
+          </div>
+
+          <div class="input-group">
+            <div class="input-label">Your Phone Number</div>
+            <input name="phone" class="form-input">
+          </div>
+
+          <div class="flex space-between" style="border-top: 2px solid gray;padding-top: 20px;">
+            <button type="submit" class="btn" onclick="close_modal('modal-order')">Submit</button>
+            <a class="btn light" onclick="close_modal('modal-order')">Cancel</a>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

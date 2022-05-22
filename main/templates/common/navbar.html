@@ -1,0 +1,39 @@
+{% load static %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Lobster+Two:wght@700&family=Neuton:wght@700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'css/landing.css' %}">
+<link rel="stylesheet" href="{% static 'css/util.css' %}">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="{% static 'js/modal.js' %}"></script>
+<script src="{% static 'js/slider.js' %}"></script>
+
+
+<nav class='navbar'>
+  <div>
+    <div class='logo'>
+      <img class="logo-img" src="{% static 'images/logo.png' %}">
+      <span class="nowrap">Plant BD</span>
+    </div>
+  </div>
+
+  <div class='navigation nav-group'>
+    <a class="btn borderless" href="/"> Home </a>
+    <a class="btn borderless" href="/product"> Product </a>
+    <a class="btn borderless" href="/about"> About </a>
+    <a class="btn borderless" href="/gallery"> Gallery </a>
+    <a class="btn borderless" href="/blog"> Blog </a>
+  </div>
+
+  <div class="auth nav-group">
+    <a class='btn light nowrap'>Log In</a>
+    <a class='btn nowrap'>Sign Up</a>
+  </div>
+
+</nav>
