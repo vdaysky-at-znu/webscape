@@ -4,6 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Plants</title>
   </head>
 <body>
@@ -50,7 +51,7 @@
 
       <div id="slider1" class="section">
 
-      
+
       </div>
 
       <div id="slider2" class="section">
@@ -119,25 +120,45 @@
 
         </div>
         <form method="POST" class="modal-body">
-          <h2>Place Order </h2>
+          <h2 style="font-family: 'Lobster Two'">Place Order</h2>
           <div class="input-group">
             <div class="input-label">Your Name</div>
-            <input name="name" class="form-input">
+            <input name="name" class="form-input" autocomplete="off">
           </div>
 
           <div class="input-group">
             <div class="input-label">Your Phone Number</div>
-            <input name="phone" class="form-input">
+            <input name="phone" class="form-input" autocomplete="off">
           </div>
 
           <div class="flex space-between" style="border-top: 2px solid gray;padding-top: 20px;">
-            <button type="submit" class="btn" onclick="close_modal('modal-order')">Submit</button>
+            <button type="submit" class="btn me-1" onclick="close_modal('modal-order')">Submit</button>
             <a class="btn light" onclick="close_modal('modal-order')">Cancel</a>
           </div>
 
         </form>
       </div>
     </div>
+
+    <div id="modal-login" class="modal-container hidden">
+      <div class="form flex center" style="background: #f3f3f3">
+        <div class="flex column center" style="margin: 8rem 5rem;">
+          <h2 class="text-neuton text-center mb-5">Log in</h2>
+          <div class="flex column space-between" style="height: 80%">
+          <div class="flex column mb-5">
+            <input placeholder="Email">
+            <input placeholder="Password" type="password">
+          </div>
+
+          <div class="flex space-evenly flex-row-to-col">
+            <button class="btn m-1" onclick="close_modal('modal-login')">Log In</button>
+            <button class="btn light  m-1" onclick="close_modal('modal-login')">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
 
   </div>
 

@@ -13,9 +13,17 @@
 
 <script src="{% static 'js/modal.js' %}"></script>
 <script src="{% static 'js/slider.js' %}"></script>
+<script src="{% static 'js/sidebar.js' %}"></script>
 
 
 <nav class='navbar'>
+
+    <div class="menu-btn mq-3-on">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+    </div>
+
   <div>
     <div class='logo'>
       <img class="logo-img" src="{% static 'images/logo.png' %}">
@@ -23,17 +31,34 @@
     </div>
   </div>
 
-  <div class='navigation nav-group'>
-    <a class="btn borderless" href="/"> Home </a>
-    <a class="btn borderless" href="/product"> Product </a>
-    <a class="btn borderless" href="/about"> About </a>
-    <a class="btn borderless" href="/gallery"> Gallery </a>
-    <a class="btn borderless" href="/blog"> Blog </a>
+  <div class='navigation nav-group mq-3-off flex'>
+    <a class="btn borderless p-0" href="/"> Home </a>
+    <a class="btn borderless p-0" href="/product"> Product </a>
+    <a class="btn borderless p-0" href="/about"> About </a>
+    <a class="btn borderless p-0" href="/gallery"> Gallery </a>
+    <a class="btn borderless p-0" href="/blog"> Blog </a>
   </div>
 
+
   <div class="auth nav-group">
-    <a class='btn light nowrap'>Log In</a>
+    <a class='btn light nowrap' onclick="open_modal('modal-login', {})">Log In</a>
     <a class='btn nowrap'>Sign Up</a>
   </div>
 
 </nav>
+
+<div class="sidebar mq-3-on">
+  <div class="flex column space-between" style="height: 100%">
+    <div class="sidebar-options">
+    <a class="sidebar-option" href="/"> Home </a>
+    <a class="sidebar-option" href="/product"> Product </a>
+    <a class="sidebar-option" href="/about"> About </a>
+    <a class="sidebar-option" href="/gallery"> Gallery </a>
+    <a class="sidebar-option" href="/blog"> Blog </a>
+    </div>
+    <div class="flex" style="border-top: 2px solid #afafaf; background: #e7e7e7">
+      <a class="sidebar-option" href="#"> Fancy bottom link </a>
+    </div>
+  </div>
+
+</div>

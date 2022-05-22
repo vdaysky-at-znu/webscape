@@ -6,12 +6,20 @@
   justify-content: space-between;
 }
 
+.center {
+  justify-content: center;
+}
+
 .space-around {
   justify-content: space-around;
 }
 
 .space-evenly {
   justify-content: space-evenly;
+}
+
+.column {
+  flex-direction: column;
 }
 
 .align-center {
@@ -24,6 +32,14 @@
 
 .m-1 {
   margin: .2rem;
+}
+
+.p-1 {
+    padding: .2rem;
+}
+
+.me-1 {
+  margin-right: .2rem;
 }
 
 .m-3 {
@@ -43,6 +59,10 @@
 
 .pb-5 {
   padding-bottom: 1.5rem;
+}
+
+.p-0 {
+  padding: 0!important;
 }
 
 .nowrap {
